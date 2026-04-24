@@ -31,7 +31,9 @@ logger = logging.getLogger(__name__)
 
 UNIPROT_IDS = {"SCN1A": "P35498", "SCN2A": "Q99250"}
 
-# PRESCOTT API endpoint (hypothetical; replace with actual if available)
+# PRESCOTT API endpoint.
+# NOTE: This URL is provisional — verify the actual deployment endpoint before use.
+# If no public API is available, the conservation-proxy fallback will be used automatically.
 PRESCOTT_API_URL = "https://prescott.bioinf.uni-sb.de/api/predict"
 
 # Score thresholds for classification

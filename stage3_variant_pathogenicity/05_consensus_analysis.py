@@ -39,8 +39,8 @@ TOOL_WEIGHTS = {
 }
 
 # Consensus thresholds
-CONSENSUS_PATHOGENIC = 0.55
-CONSENSUS_BENIGN = 0.35
+CONSENSUS_PATHOGENIC = 0.564  # aligned with AlphaMissense (Cheng et al. 2023)
+CONSENSUS_BENIGN = 0.34
 
 CLASS_TO_SCORE = {
     "likely_pathogenic": 1.0,

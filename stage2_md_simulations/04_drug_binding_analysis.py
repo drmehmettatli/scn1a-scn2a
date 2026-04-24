@@ -191,7 +191,8 @@ def estimate_mm_gbsa_energy(
         sasa_drug_free_mean = np.mean(sasa_drug_free.sum(axis=1))
 
         buried_sasa_nm2 = max(0, sasa_drug_free_mean - sasa_drug_in_complex)
-        # Empirical: ΔG_nonpolar ≈ 0.0072 kcal/mol/Å² * 100 Å²/nm²
+        # Empirical surface-tension coefficient γ = 0.0072 kcal/mol/Å² (from
+        # Onufriev et al. JPCB 2004). buried_sasa_nm2 * 100 converts nm² → Å².
         dg_nonpolar = -0.0072 * buried_sasa_nm2 * 100
 
         result = {

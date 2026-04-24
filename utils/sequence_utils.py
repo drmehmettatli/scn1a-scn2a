@@ -264,7 +264,10 @@ def align_sequences(seq1: str, seq2: str) -> tuple[str, str, float]:
     except ImportError:
         pass
 
-    # Fallback: just return sequences and estimate identity from overlapping positions
+    # Fallback: sequences are returned unaligned; percent identity is computed from
+    # overlapping positions only.
+    # WARNING: This fallback produces unreliable identity values when sequences differ
+    # in length or contain gaps. Install Biopython for accurate alignment results.
     min_len = min(len(seq1), len(seq2))
     matches = sum(a == b for a, b in zip(seq1[:min_len], seq2[:min_len]))
     return seq1, seq2, round(matches / min_len * 100, 2)

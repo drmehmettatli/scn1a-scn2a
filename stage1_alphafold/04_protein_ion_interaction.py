@@ -300,6 +300,8 @@ def analyze_putative_sites(atoms: list[Atom], gene_name: str) -> list[dict]:
         if a.res_name in ("ASP", "GLU") and a.atom_name in ("OD1", "OD2", "OE1", "OE2")
     ]
     logger.info("%s: %d acidic oxygen atoms for putative site search", gene_name, len(acidic_oxygens))
+    # Build O(1) lookup from atom object to its index to avoid O(n²) list.index() calls
+    ao_idx = {id(a): i for i, a in enumerate(acidic_oxygens)}
     results = []
     used = set()
     for i, oa in enumerate(acidic_oxygens):
@@ -314,7 +316,7 @@ def analyze_putative_sites(atoms: list[Atom], gene_name: str) -> list[dict]:
                 cluster.append((ob, d))
         if len(cluster) >= 2:
             for _, (a, _) in enumerate(cluster):
-                used.add(acidic_oxygens.index(a) if a in acidic_oxygens else -1)
+                used.add(ao_idx.get(id(a), -1))
             centroid = np.mean([a.coords for a, _ in cluster], axis=0)
             results.append({
                 "gene": gene_name,
