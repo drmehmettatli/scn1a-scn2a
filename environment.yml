@@ -1,0 +1,25 @@
+name: scn1a-scn2a
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy>=1.24.0
+  - pandas>=2.0.0
+  - scipy>=1.10.0
+  - matplotlib>=3.7.0
+  - seaborn>=0.12.0
+  - plotly>=5.14.0
+  - biopython>=1.81
+  - requests>=2.31.0
+  - mdtraj>=1.9.9
+  - nglview>=3.0.8
+  - jupyter>=1.0.0
+  - ipywidgets>=8.0.0
+  - h5py>=3.9.0
+  - tqdm>=4.65.0
+  - pip:
+    - torch>=2.0.0
+    - transformers>=4.30.0
+    - fair-esm>=2.0.0
