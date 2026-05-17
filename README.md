@@ -93,7 +93,7 @@ Aşağıdaki metni doldur:
 
 ## 5) Kritik bilimsel not (önerilen ikinci analiz)
 
-Full-length protein karşılaştırması yapılınca değişken bölgeler sonuçları etkileyebilir.
+Full-length protein karşılaştırması yapılırken değişken bölgeler sonuçları etkileyebilir.
 Daha biyolojik anlamlı bir karşılaştırma için ikinci turda sadece korunmuş kanal bölgeleri (özellikle transmembran/pore domainleri) ile yeniden hizalama yapılması önerilir.
 
 ---
