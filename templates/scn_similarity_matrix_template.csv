@@ -1,0 +1,11 @@
+Protein,SCN1A,SCN2A,SCN3A,SCN4A,SCN5A,SCN7A,SCN8A,SCN9A,SCN10A,SCN11A
+SCN1A,100,,,,,,,,,
+SCN2A,,100,,,,,,,,
+SCN3A,,,100,,,,,,,
+SCN4A,,,,100,,,,,,
+SCN5A,,,,,100,,,,,
+SCN7A,,,,,,100,,,,
+SCN8A,,,,,,,100,,,
+SCN9A,,,,,,,,100,,
+SCN10A,,,,,,,,,100,
+SCN11A,,,,,,,,,,100
